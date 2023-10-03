@@ -1,0 +1,87 @@
+/*
+ * Copyright (c) 2022, Gerson Fernando Budke <nandojve@gmail.com>
+ * SPDX-License-Identifier: Apache-2.0
+ * Modified 2023 by Sebastian Schlupp for ATSAME51J20
+ * Redistributed under the same (Apache-2.0) license
+ */
+
+#include <dt-bindings/pinctrl/same51j-pinctrl.h>
+
+&pinctrl {
+	pwm_default: pwm_default {
+		group1 {
+			pinmux = <PA14F_TCC2_WO0>;
+		};
+	};
+
+	/*gmac_rmii: gmac_rmii {
+		group1 {
+			pinmux = <PA14L_GMAC_GTXCK>,
+				 <PA17L_GMAC_GTXEN>,
+				 <PA18L_GMAC_GTX0>,
+				 <PA19L_GMAC_GTX1>,
+				 <PC20L_GMAC_GRXDV>,
+				 <PA13L_GMAC_GRX0>,
+				 <PA12L_GMAC_GRX1>,
+				 <PA15L_GMAC_GRXER>;
+		};
+	};*/
+
+	/*mdio_default: mdio_default {
+		group1 {
+			pinmux = <PC11L_GMAC_GMDC>,
+				 <PC12L_GMAC_GMDIO>;
+		};
+	};*/
+
+	/*sercom7_i2c_default: sercom7_i2c_default {
+		group1 {
+			pinmux = <PD8C_SERCOM7_PAD0>,
+				 <PD9C_SERCOM7_PAD1>;
+		};
+	};*/
+
+	/*sercom4_spi_default: sercom4_spi_default {
+		group1 {
+			pinmux = <PB26D_SERCOM4_PAD1>,
+				 <PB27D_SERCOM4_PAD0>,
+				 <PB29D_SERCOM4_PAD3>;
+		};
+	};*/
+
+	sercom5_uart_default: sercom5_uart_default {
+		group1 {
+			pinmux = <PB16C_SERCOM5_PAD0>,
+				 <PB17C_SERCOM5_PAD1>;
+		};
+	};
+
+	sercom2_i2c_default: sercom2_i2c_default {
+		group1 {
+			pinmux = <PA12C_SERCOM2_PAD0>,
+				 <PA13C_SERCOM2_PAD1>;
+		};
+	};
+
+	sercom1_spi_default: sercom1_spi_default {
+		group1 {
+			pinmux = <PA17C_SERCOM1_PAD1>,
+				 <PA16C_SERCOM1_PAD0>,
+				 <PA19C_SERCOM1_PAD3>;
+		};
+	};
+
+	sercom0_uart_default: sercom0_uart_default {
+		group1 {
+			pinmux = <PA8C_SERCOM0_PAD0>,
+				 <PA9C_SERCOM0_PAD1>;
+		};
+	};
+
+	/*usb_dc_default: usb_dc_default {
+		group1 {
+			pinmux = <PA25H_USB_DP>,
+				 <PA24H_USB_DM>;
+		};
+	};*/
+};

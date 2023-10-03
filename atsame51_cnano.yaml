@@ -1,0 +1,23 @@
+# Copyright (c) 2019 Benjamin Valentin
+# SPDX-License-Identifier: Apache-2.0
+# Modified 2023 by Sebastian Schlupp for ATSAME51J20
+# Redistributed under the same (Apache-2.0) license
+identifier: atsame51_cnano
+name: SAM E51 Curiosity Nano
+type: mcu
+arch: arm
+ram: 256
+flash: 1024
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+supported:
+#  - adc
+  - gpio
+  - pwm
+  - spi
+  - i2c
+  - uart
+#  - usb_device
+#  - netif:eth
