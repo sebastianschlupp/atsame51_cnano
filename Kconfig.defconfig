@@ -1,9 +1,8 @@
 # SAM E54 Xplained Pro board configuration
 #
 # Copyright (c) 2019 Benjamin Valentin
+# Copyright (c) 2023 Sebastian Schlupp
 # SPDX-License-Identifier: Apache-2.0
-# Modified 2023 by Sebastian Schlupp for ATSAME51J20
-# Redistributed under the same (Apache-2.0) license
 
 if BOARD_ATSAME51_CNANO
 

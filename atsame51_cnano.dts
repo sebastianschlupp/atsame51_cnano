@@ -1,8 +1,7 @@
 /*
  * Copyright (c) 2019 Benjamin Valentin
+ * Copyright (c) 2023 Sebastian Schlupp
  * SPDX-License-Identifier: Apache-2.0
- * Modified 2023 by Sebastian Schlupp for ATSAME51J20
- * Redistributed under the same (Apache-2.0) license
  */
 
 /dts-v1/;
@@ -11,8 +10,8 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
 / {
-	model = "SAM E54 Xplained Pro";
-	compatible = "atsame54,xpro", "atmel,same54p20a", "atmel,same54";
+	model = "SAM E51 Curiosity Nano";
+	compatible = "atsame51,cnano", "atmel,same51j20a", "atmel,same51";
 
 	chosen {
 		zephyr,console = &sercom5;
@@ -24,6 +23,7 @@
 	/* These aliases are provided for compatibility with samples */
 	aliases {
 		led0 = &led0;
+		led1 = &led1;
 		pwm-led0 = &pwm_led0;
 		sw0 = &button0;
 		i2c-0 = &sercom7;
@@ -34,6 +34,10 @@
 		led0: led_0 {
 			gpios = <&porta 14 GPIO_ACTIVE_LOW>;
 			label = "Yellow LED";
+		};
+		led1: led_1 {
+			gpios = <&porta 20 GPIO_ACTIVE_LOW>;
+			label = "Spare LED";
 		};
 	};
 
@@ -126,29 +130,6 @@
 zephyr_udc0: &usb0 {
 	status = "okay";
 
-	/*pinctrl-0 = <&usb_dc_default>;
-	pinctrl-names = "default";*/
+	pinctrl-0 = <&usb_dc_default>;
+	pinctrl-names = "default";
 };
-
-/*&gmac {
-	status = "okay";
-
-	pinctrl-0 = <&gmac_rmii>;
-	pinctrl-names = "default";
-
-	mac-eeprom = <&eeprom>;
-	phy-handle = <&phy>;
-};*/
-
-/*&mdio {
-	status = "okay";
-
-	pinctrl-0 = <&mdio_default>;
-	pinctrl-names = "default";
-
-	phy: phy {
-		compatible = "ethernet-phy";
-		status = "okay";
-		address = <0>;
-	};
-};*/
