@@ -33,11 +33,13 @@
 		compatible = "gpio-leds";
 		led0: led_0 {
 			gpios = <&porta 14 GPIO_ACTIVE_LOW>;
-			label = "Yellow LED";
+			/*Usage of labels is actively discouraged for new implementations*/
+			/*label = "Yellow LED";*/
 		};
 		led1: led_1 {
 			gpios = <&porta 20 GPIO_ACTIVE_LOW>;
-			label = "Spare LED";
+			/*Usage of labels is actively discouraged for new implementations*/
+			/*label = "Spare LED";*/
 		};
 	};
 
@@ -52,7 +54,8 @@
 		compatible = "gpio-keys";
 		button0: button_0 {
 			gpios = <&porta 15 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-			label = "SW0";
+			/*Usage of labels is actively discouraged for new implementations*/
+			/*label = "SW0";*/
 			zephyr,code = <INPUT_KEY_0>;
 		};
 	};
