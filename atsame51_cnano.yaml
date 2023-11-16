@@ -20,3 +20,4 @@ supported:
   - i2c
   - uart
   - usb_device
+  - can

@@ -26,7 +26,8 @@
 		led1 = &led1;
 		pwm-led0 = &pwm_led0;
 		sw0 = &button0;
-		i2c-0 = &sercom7;
+		i2c-0 = &sercom2;
+		can0 = &can0;
 	};
 
 	leds {
@@ -56,6 +57,22 @@
 			zephyr,code = <INPUT_KEY_0>;
 		};
 	};
+	soc {
+		can1: can1 {
+			reg = <0x42000400 0x400>;
+			interrupts = "";
+			clocks = "";
+			clock-names = "";
+			divider = "";
+			compatible = "atmel,sam0-can";
+			pinctrl-0 = <&can1_default>;
+			pinctrl-names = "default";
+		};
+	};
+};
+
+&can1{
+	status = "okay";
 };
 
 &tcc2 {
